@@ -21,7 +21,7 @@ def read_template(uri):
 def transform_markdown(text):
     """ auxiliar function to transform markdown to html """
 
-    return markdown(text, extensions=["fenced_code", "codehilite"])
+    return markdown(text, extensions=["fenced_code", "codehilite", "tables"])
 
 
 class Report:
