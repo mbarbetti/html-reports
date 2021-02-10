@@ -51,7 +51,7 @@ class Report:
             self.raw_scripts.append(script)
 
         else:
-            self.script.append(script)
+            self.scripts.append(script)
 
     def add_style(self, style):
         """ Add a style resource """
