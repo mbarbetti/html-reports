@@ -1,5 +1,4 @@
 beautifulsoup4
-easydev
 jinja2
 matplotlib
 markdown

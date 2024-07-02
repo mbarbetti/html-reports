@@ -23,5 +23,5 @@ setup(
         "Programming Language :: Python :: 3.6",
     ],
     package_data={"html_reports": ["resources/*"]},
-    install_requires=["beautifulsoup4", "easydev", "jinja2", "matplotlib", "markdown"],
+    install_requires=["beautifulsoup4", "jinja2", "matplotlib", "markdown"],
 )

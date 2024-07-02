@@ -4,7 +4,7 @@ import os
 from io import BytesIO
 import base64
 
-import easydev
+import importlib
 import matplotlib.pyplot as plt
 from jinja2 import Template
 from markdown import markdown
@@ -124,11 +124,9 @@ class Report:
 
         # If no custom path, use one of the predefined templates
         if template_path is None:
-            relative_uri = f"html_reports/templates/{template_name}.html"
+            pkg_loc = os.path.dirname(importlib.util.find_spec("html_reports").origin)
 
-            template_uri = os.sep.join(
-                [easydev.get_package_location("html_reports")] + relative_uri.split("/")
-            )
+            template_uri = f"{pkg_loc}/templates/{template_name}.html"
 
         # Else, use user template
         else:
